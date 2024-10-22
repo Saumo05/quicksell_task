@@ -71,10 +71,11 @@ const getUserInitials = (userName) => {
 };
 
 const TaskColumn = ({ group, tasks, groupBy, users }) => {
-  console.log(tasks, "Priority");
-  const isAvailable = users ? users.available : false;
-  console.log(users, "users");
-  console.log(users[0].available, "Availability");
+  const isAvailable =
+    groupBy === "users"
+      ? users.find((user) => user.name === group)?.available
+      : false;
+
   return (
     <div className="task-column">
       <div className="task-column-header">

@@ -95,8 +95,8 @@
 
 .availability-indicator {
   position: absolute;
-  bottom: 0;
-  right: 0;
+  bottom: -2px;
+  right: -1.5px;
   width: 8px;
   height: 8px;
   border-radius: 50%;

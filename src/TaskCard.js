@@ -28,7 +28,7 @@ const getRandomColor = () => {
 const TaskCard = ({ task, statusIcons, users, groupBy, priorityIcons }) => {
   const userName = users.find((user) => user.id === task.userId)?.name; // Get the user name using userId
   const userInitials = getUserInitials(userName); // Get the initials
-  const isAvailable = users ? users.available : false;
+  const isAvailable = users.find((user) => user.id === task.userId)?.available;
 
   return (
     <div className="task-card">
