@@ -8,7 +8,7 @@ function useLocalStorage(key, initialValue) {
         return JSON.parse(storedValue);
       } catch (error) {
         console.warn(`Error parsing stored value for ${key}:`, error);
-        return storedValue; // Return the raw string if it's not valid JSON
+        return storedValue;
       }
     }
     return initialValue;

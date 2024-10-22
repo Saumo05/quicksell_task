@@ -11,8 +11,8 @@ import High from "./assets/Img - High Priority.svg";
 import Medium from "./assets/Img - Medium Priority.svg";
 import Low from "./assets/Img - Low Priority.svg";
 import greyUrgent from "./assets/SVG - Urgent Priority grey.svg";
-import doneIcon from "./assets/Done.svg"; // You'll need to add this icon
-import cancellationIcon from "./assets/Cancelled.svg"; // You'll need to add this icon
+import doneIcon from "./assets/Done.svg";
+import cancellationIcon from "./assets/Cancelled.svg";
 
 import dots from "./assets/3 dot menu.svg";
 import add from "./assets/add.svg";
@@ -52,14 +52,11 @@ const priorityLabels = {
 const colors = [
   "#FF5733", // Red
   "#33FF57", // Green
-  "#3357FF", // Blue
   "#F1C40F", // Yellow
   "#8E44AD", // Purple
-  "#E67E22", // Orange
   "#2ECC71", // Emerald
   "#3498DB", // Peter River
   "#9B59B6", // Amethyst
-  "#F39C12", // Orange
 ];
 
 const getRandomColor = () => {

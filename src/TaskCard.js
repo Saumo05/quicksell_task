@@ -11,14 +11,11 @@ const getUserInitials = (userName) => {
 const colors = [
   "#FF5733", // Red
   "#33FF57", // Green
-  "#3357FF", // Blue
   "#F1C40F", // Yellow
   "#8E44AD", // Purple
-  "#E67E22", // Orange
   "#2ECC71", // Emerald
   "#3498DB", // Peter River
   "#9B59B6", // Amethyst
-  "#F39C12", // Orange
 ];
 
 const getRandomColor = () => {
@@ -26,8 +23,8 @@ const getRandomColor = () => {
 };
 
 const TaskCard = ({ task, statusIcons, users, groupBy, priorityIcons }) => {
-  const userName = users.find((user) => user.id === task.userId)?.name; // Get the user name using userId
-  const userInitials = getUserInitials(userName); // Get the initials
+  const userName = users.find((user) => user.id === task.userId)?.name;
+  const userInitials = getUserInitials(userName);
   const isAvailable = users.find((user) => user.id === task.userId)?.available;
 
   return (

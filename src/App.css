@@ -41,11 +41,11 @@ details summary {
 }
 
 details summary img:first-child {
-  margin-right: 10px; /* Add space between first image and text */
+  margin-right: 10px;
 }
 
 details summary img:last-child {
-  margin-left: 10px; /* Add space between text and last image */
+  margin-left: 10px;
 }
 
 h1 {
@@ -58,18 +58,18 @@ h1 {
 
 .dropdown {
   display: flex;
-  flex-direction: column; /* By default, labels and selects will be in columns */
+  flex-direction: column;
   gap: 10px;
   position: absolute;
   top: 100%;
   left: 0;
-  margin-top: 10px; /* Creates space between the dropdown and the button */
-  z-index: 10; /* Ensures the dropdown appears above other content */
+  margin-top: 10px;
+  z-index: 10;
   background-color: white;
   border: 1px solid #ccc;
   border-radius: 8px;
   padding: 10px;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Creates a shadow to make the dropdown appear elevated */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   min-width: 200px;
 }
 
@@ -77,13 +77,13 @@ h1 {
   padding: 10px;
   font-size: 15px;
   color: #a3a1a1;
-  margin-right: 10px; /* Space between label and select menu */
+  margin-right: 10px;
 }
 
 .dropdown-row {
   display: flex;
-  align-items: center; /* Vertically aligns label and select in the center */
-  justify-content: space-between; /* Ensures there's space between the label and the select */
+  align-items: center;
+  justify-content: space-between;
 }
 
 .dropdown select {
@@ -91,5 +91,5 @@ h1 {
   border-radius: 5px;
   margin-left: 50px;
   padding: 5px;
-  width: 120px; /* Adjust width as needed */
+  width: 120px;
 }
