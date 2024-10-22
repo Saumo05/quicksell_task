@@ -9,7 +9,7 @@
   flex-direction: column;
   max-height: calc(
     100vh - 100px
-  ); /* Adjust this value based on your header height */
+  ); 
 }
 
 .task-column-header {
@@ -60,6 +60,12 @@
   gap: 10px;
   overflow-y: auto;
   flex-grow: 1;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+.task-list::-webkit-scrollbar {
+  display: none; /* Chrome, Safari and Opera */
 }
 
 .user-initials-container {

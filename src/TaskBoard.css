@@ -5,13 +5,18 @@
   padding-bottom: 20px;
   overflow-x: auto;
   flex-grow: 1;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+.task-board::-webkit-scrollbar {
+  display: none; /* Chrome, Safari and Opera */
 }
 
 @media (max-width: 768px) {
   .task-board {
     flex-direction: column;
     align-items: center;
-    overflow-y: auto;
     overflow-x: hidden;
   }
 }
