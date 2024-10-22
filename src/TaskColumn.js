@@ -11,6 +11,8 @@ import High from "./assets/Img - High Priority.svg";
 import Medium from "./assets/Img - Medium Priority.svg";
 import Low from "./assets/Img - Low Priority.svg";
 import greyUrgent from "./assets/SVG - Urgent Priority grey.svg";
+import doneIcon from "./assets/Done.svg"; // You'll need to add this icon
+import cancellationIcon from "./assets/Cancelled.svg"; // You'll need to add this icon
 
 import dots from "./assets/3 dot menu.svg";
 import add from "./assets/add.svg";
@@ -24,6 +26,8 @@ const statusIcons = {
   Backlog: backlogIcon,
   Todo: todoIcon,
   "In progress": inProgressIcon,
+  Done: doneIcon,
+  Cancellation: cancellationIcon,
 };
 
 const priorityIcons = {
@@ -76,7 +80,7 @@ const TaskColumn = ({ group, tasks, groupBy, users }) => {
       ? users.find((user) => user.name === group)?.available
       : false;
 
-  return (
+  const renderColumn = (columnGroup, columnTasks) => (
     <div className="task-column">
       <div className="task-column-header">
         {groupBy === "users" ? (
@@ -85,7 +89,7 @@ const TaskColumn = ({ group, tasks, groupBy, users }) => {
               className="user-initials"
               style={{ backgroundColor: getRandomColor() }}
             >
-              {getUserInitials(group)}
+              {getUserInitials(columnGroup)}
             </div>
             <div
               className={`availability-indicator ${
@@ -95,20 +99,20 @@ const TaskColumn = ({ group, tasks, groupBy, users }) => {
           </div>
         ) : (
           <img
-            src={statusIcons[group] || ""}
-            alt={`${group} icon`}
+            src={statusIcons[columnGroup] || ""}
+            alt={`${columnGroup} icon`}
             className="status-icon"
           />
         )}
-        <h3 className="groupName">{group}</h3>
-        <span className="count">{tasks.length}</span>
+        <h3 className="groupName">{columnGroup}</h3>
+        <span className="count">{columnTasks.length}</span>
         <div className="right-icons">
-          <img src={add} alt={`${group} icon`} className="add-icon" />
-          <img src={dots} alt={`${group} icon`} className="dot-icon" />
+          <img src={add} alt={`${columnGroup} icon`} className="add-icon" />
+          <img src={dots} alt={`${columnGroup} icon`} className="dot-icon" />
         </div>
       </div>
       <div className="task-list">
-        {tasks.map((task) => {
+        {columnTasks.map((task) => {
           const taskValue =
             groupBy === "status" ? priorityLabels[task.priority] : task.status;
 
@@ -128,6 +132,22 @@ const TaskColumn = ({ group, tasks, groupBy, users }) => {
       </div>
     </div>
   );
+
+  if (groupBy === "status") {
+    return (
+      <>
+        {renderColumn(group, tasks)}
+        {group === "Backlog" && (
+          <>
+            {renderColumn("Done", [])}
+            {renderColumn("Cancellation", [])}
+          </>
+        )}
+      </>
+    );
+  }
+
+  return renderColumn(group, tasks);
 };
 
 export default TaskColumn;
