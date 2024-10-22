@@ -27,6 +27,7 @@
 .task-id {
   color: grey;
   padding-top: 10px;
+  font-size: 12px;
 }
 
 .task-card-header span {
@@ -35,14 +36,15 @@
 }
 
 .task-card h3 {
-  font-size: 16px;
+  font-size: 14px;
+  margin: 5px 0;
 }
 
 .feature-tag {
   display: inline-flex;
   align-items: center;
   border: 1px solid rgb(197, 194, 194);
-  padding: 5px;
+  padding: 3px 5px;
   border-radius: 8px;
 }
 
@@ -60,15 +62,16 @@
 
 .priority-Icon {
   padding: 3px;
-  width: 16px;
-  height: 16px;
+  width: 14px;
+  height: 14px;
   margin-right: 5px;
   border: 1px solid rgb(197, 194, 194);
   border-radius: 5px;
 }
+
 .circle {
-  width: 10px;
-  height: 10px;
+  width: 8px;
+  height: 8px;
   background-color: grey;
   border-radius: 50%;
   margin-right: 5px;
@@ -76,12 +79,26 @@
 
 .feature {
   font-weight: bold;
-  font-size: 12px;
+  font-size: 10px;
   color: grey;
 }
 
 footer {
   margin-top: 10px;
-  font-size: 12px;
+  font-size: 10px;
   color: #999;
+}
+
+@media (max-width: 768px) {
+  .task-card {
+    padding: 10px;
+  }
+
+  .task-card h3 {
+    font-size: 12px;
+  }
+
+  .feature {
+    font-size: 9px;
+  }
 }
