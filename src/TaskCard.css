@@ -1,0 +1,87 @@
+.task-card {
+  background-color: #ffffff;
+  padding: 15px;
+  border-radius: 6px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.task-card-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.task-id-initials {
+  display: flex;
+  justify-content: space-between; /* Distribute space between elements */
+  width: 100%; /* Make it full width */
+}
+
+.task-title-status {
+  display: flex;
+  align-items: center; /* Center vertically */
+  width: 100%; /* Make it full width */
+}
+
+.task-id {
+  color: grey; /* Set ID color to grey */
+  padding-top: 10px;
+}
+
+.task-card-header span {
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.task-card h3 {
+  font-size: 16px;
+}
+
+.feature-tag {
+  display: inline-flex;
+  align-items: center; /* Center vertically */
+  border: 1px solid rgb(197, 194, 194); /* Black border */
+  padding: 5px; /* Padding around the tag */
+  border-radius: 8px; /* Slightly round the corners */
+}
+
+.priority-feature-container {
+  display: flex;
+  align-items: center; /* Vertically center both elements */
+  margin-top: 10px; /* Space from the task title */
+}
+
+.priority-feature-container .status-icon {
+  margin-right: 8px; /* Add space between the icon and the feature tag */
+  border: 1px solid rgb(197, 194, 194);
+  border-radius: 5px;
+}
+
+.priority-Icon {
+  padding: 3px;
+  width: 16px;
+  height: 16px;
+  margin-right: 5px;
+  border: 1px solid rgb(197, 194, 194);
+  border-radius: 5px;
+}
+.circle {
+  width: 10px; /* Circle width */
+  height: 10px; /* Circle height */
+  background-color: grey; /* Grey color */
+  border-radius: 50%; /* Make it round */
+  margin-right: 5px; /* Space between circle and text */
+}
+
+.feature {
+  font-weight: bold; /* Keep the text bold */
+  font-size: 12px; /* Decrease font size */
+  color: grey; /* Set font color to grey */
+}
+
+footer {
+  margin-top: 10px;
+  font-size: 12px;
+  color: #999;
+}
